@@ -19,8 +19,8 @@ Create a `/Secrets/Keys.plist` plist file in the project directory with the foll
 ```
 Replace `http://example.server.com` under `api-url` with the host of your backend server 
 
-## Notes
-  * In order for `Endpoint.swift` to work as intended, your project should have the a scheme for development and one for production. The reason for this is because values in `Endpoint.swift` depend on if `DEV_SERVER` is `true` or `false`. 
+## Important Notes
+  * In order for `Endpoint.swift` to work as intended, your project should have the a scheme for **development** and one for **production**. The reason for this is because values in `Endpoint.swift` depend on if `DEV_SERVER` is `true` or `false`. 
   * `DEV_SERVER` is `true` when you are running on a development scheme.
   * To create a scheme for development, follow the steps below:
   1. Click on `New Scheme`
