@@ -17,7 +17,7 @@ Create a `/Secrets/Keys.plist` plist file in the project directory with the foll
 </dict>
 </plist>
 ```
-Replace `http://example.server.com` under `api-url` with the host of your backend server 
+Replace `example.server` under `api-url` with the host of your backend server 
 
 ## Important Notes
   * In order for `Endpoint.swift` to work as intended, your project should have the a scheme for **development** and one for **production**. The reason for this is because values in `Endpoint.swift` depend on if `DEV_SERVER` is `true` or `false`. 
