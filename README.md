@@ -24,6 +24,12 @@ Replace `http://example.server.com` under `api-url` with the host of your backen
   * `DEV_SERVER` is `true` when you are running on a development scheme.
   * To create a scheme for development, follow the steps below:
   1. Click on `New Scheme`
+  
+  ![screen shot 2019-01-28 at 11 37 58 pm](https://user-images.githubusercontent.com/26048121/51884811-d9d0a500-2356-11e9-954a-5e4e83fb35bb.png)
+  
   2. Create a title for your scheme, i.e. `Clicker Dev Server`.
   3. Make sure that the `Build Configuration` for the `Run` tab is `Debug Dev Server`.
+  
+  ![screen shot 2019-01-28 at 11 36 40 pm](https://user-images.githubusercontent.com/26048121/51884832-e81ec100-2356-11e9-89d0-c12b19545769.png)
+  
   * To create a scheme for production, repeat the steps above except that the `Build Configuration` for the `Run` tab should be `Debug`.
