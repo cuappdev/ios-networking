@@ -15,15 +15,17 @@ enum EndpointMethod: String {
     case delete = "DELETE"
 }
 
-/// Looks at Secrets/Keys.plist file which should contain as keys:
-/// - "api-dev-url" which should be localhost
+/// Looks at Secrets/Keys.plist file which should contain as key:
 /// - "api-url" should be the host of the deployed backend url
 enum Keys: String {
     case apiURL = "api-url"
     case apiDevURL = "api-dev-url"
 
     var value: String {
-        return Keys.keyDict[rawValue] as! String
+        switch self {
+        case .apiDevURL: return "localhost"
+        case .apiURL: return Keys.keyDict[rawValue] as! String
+        }
     }
 
     static var hostURL: Keys {
