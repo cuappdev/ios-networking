@@ -12,6 +12,33 @@ import Foundation
 enum EndpointMethod: String {
     case get = "GET"
     case post = "POST"
+    case delete = "DELETE"
+}
+
+/// Looks at Secrets/Keys.plist file which should contain as keys:
+/// - "api-dev-url" which should be localhost
+/// - "api-url" should be the host of the deployed backend url
+enum Keys: String {
+    case apiURL = "api-url"
+    case apiDevURL = "api-dev-url"
+
+    var value: String {
+        return Keys.keyDict[rawValue] as! String
+    }
+
+    static var hostURL: Keys {
+        #if DEV_SERVER
+        return Keys.apiDevURL
+        #else
+        return Keys.apiURL
+        #endif
+    }
+
+    private static let keyDict: NSDictionary = {
+        guard let path = Bundle.main.path(forResource: "Keys", ofType: "plist"),
+            let dict = NSDictionary(contentsOfFile: path) else { return [:] }
+        return dict
+    }()
 }
 
 
@@ -24,6 +51,15 @@ struct Endpoint {
 }
 
 extension Endpoint {
+    /// General initializer
+    init<T: Codable>(path: String, queryItems: [URLQueryItem] = [], headers: [String: String] = [:], body: T? = nil, method: EndpointMethod = .get) {
+        self.path = path
+        self.queryItems = queryItems
+        self.headers = headers
+        self.method = (body != nil) ? .post : method
+        self.body = try? JSONEncoder().encode(body)
+    }
+
     /// POST initializer
     init<T: Codable>(path: String, headers: [String: String] = [:], body: T) {
         self.path = path
@@ -51,9 +87,11 @@ extension Endpoint {
     var url: URL? {
         var components = URLComponents()
         components.scheme = "http"
-        components.host = "localhost"
+        components.host = "\(Keys.hostURL.value)/api"
         components.path = path
+        #if DEV_SERVER
         components.port = 3000
+        #endif
         components.queryItems = queryItems
         return components.url
     }
