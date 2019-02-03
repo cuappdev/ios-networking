@@ -91,7 +91,7 @@ extension Endpoint {
         components.scheme = "http"
         components.host = "\(Keys.hostURL.value)/api"
         components.path = path
-        #if DEV_SERVER
+        #if DEBUG
         components.port = 3000
         #endif
         components.queryItems = queryItems

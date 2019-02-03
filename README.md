@@ -28,7 +28,7 @@ Replace `example.server` under `api-url` with the host of your backend server
 
   ![screen shot 2019-01-28 at 11 37 58 pm](https://user-images.githubusercontent.com/26048121/51884811-d9d0a500-2356-11e9-954a-5e4e83fb35bb.png)
 
-  2. Create a title for your scheme, i.e. `Clicker Debug`. Note that, as the article above describes, you can create your own custom build setting and create a scheme just for that.
+  2. Create a title for your scheme, i.e. `Clicker Debug`. Note that, as the article above describes, you can create your own custom configuration  and create a scheme just for that.
   3. Make sure that the `Build Configuration` for the `Run` tab is `Debug`. Doing this will ensure that whenever you `Run` your application from XCode, `DEBUG` will be true.
   
   ![screen shot 2019-02-03 at 1 04 23 am](https://user-images.githubusercontent.com/26048121/52173293-b1c6b480-274f-11e9-97dc-c2d73d8150cb.png)
