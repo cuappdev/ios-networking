@@ -21,7 +21,7 @@ Replace `example.server` under `api-url` with the host of your backend server
 
 ## Important Notes
   * In order for `Endpoint.swift` to work as intended, your project should have the a scheme for **development** and one for **production**. The reason for this is because values in `Endpoint.swift` depend on if the `DEBUG` flag is `true` or `false`. 
-  * This [article](https://zeemee.engineering/how-to-set-up-multiple-schemes-configurations-in-xcode-for-your-react-native-ios-app-7da4b5237966) explains the whole process of creating a new scheme and integrating into your app really well so it is highly recommended that you check it out!
+  * This [article](https://zeemee.engineering/how-to-set-up-multiple-schemes-configurations-in-xcode-for-your-react-native-ios-app-7da4b5237966) explains the whole process of creating a new scheme and integrating into your app really well so it is highly recommended that you check it out! This [stack overflow post](https://stackoverflow.com/questions/38813906/swift-how-to-use-preprocessor-flags-like-if-debug-to-implement-api-keys) is also good to look at if you want to understand how to add custom conditional swift compilation flags.
   * `DEBUG` is `true` when you are running on a development scheme.
   * To create a scheme for development, follow the steps below:
   1. Click on `New Scheme`
