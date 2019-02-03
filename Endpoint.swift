@@ -29,7 +29,7 @@ enum Keys: String {
     }
 
     static var hostURL: Keys {
-        #if DEV_SERVER
+        #if DEBUG
         return Keys.apiDevURL
         #else
         return Keys.apiURL

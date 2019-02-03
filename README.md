@@ -21,9 +21,10 @@ Replace `http://example.server.com` under `api-url` with the host of your backen
 
 ## Important Notes
   * In order for `Endpoint.swift` to work as intended, your project should have the a scheme for **development** and one for **production**. The reason for this is because values in `Endpoint.swift` depend on if `DEV_SERVER` is `true` or `false`. 
-  * `DEV_SERVER` is `true` when you are running on a development scheme.
+  * This [article](https://zeemee.engineering/how-to-set-up-multiple-schemes-configurations-in-xcode-for-your-react-native-ios-app-7da4b5237966) explains the whole process of creating a new scheme and integrating into your app really well so it is highly recommended that you check it out!
+  * `DEBUG` is `true` when you are running on a development scheme.
   * To create a scheme for development, follow the steps below:
   1. Click on `New Scheme`
-  2. Create a title for your scheme, i.e. `Clicker Dev Server`.
-  3. Make sure that the `Build Configuration` for the `Run` tab is `Debug Dev Server`.
+  2. Create a title for your scheme, i.e. `Clicker Debug`. Note that, as the article above describes, you can create your own custom build setting and create a scheme just for that.
+  3. Make sure that the `Build Configuration` for the `Run` tab is `Debug`. Doing this will ensure that whenever you `Run` your application from XCode, `DEBUG` will be true.
   * To create a scheme for production, repeat the steps above except that the `Build Configuration` for the `Run` tab should be `Debug`.
