@@ -45,6 +45,8 @@ enum Keys: String {
 
 
 struct Endpoint {
+    static let apiVersion: Int?
+
     let path: String
     let queryItems: [URLQueryItem]
     let headers: [String: String]
@@ -89,8 +91,12 @@ extension Endpoint {
     var url: URL? {
         var components = URLComponents()
         components.scheme = "http"
-        components.host = "\(Keys.hostURL.value)/api"
-        components.path = path
+        components.host = Keys.hostURL.value
+        if let apiVersion = Endpoint.apiVersion {
+            components.path = "/api/v\(apiVersion)/\(path)"
+        } else {
+            components.path = "/api/\(path)"
+        }
         #if DEBUG
         components.port = 3000
         #endif
