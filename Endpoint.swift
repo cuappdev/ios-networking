@@ -93,9 +93,9 @@ extension Endpoint {
         components.scheme = "http"
         components.host = Keys.hostURL.value
         if let apiVersion = Endpoint.apiVersion {
-            components.path = "/api/v\(apiVersion)/\(path)"
+            components.path = "/api/v\(apiVersion)\(path)"
         } else {
-            components.path = "/api/\(path)"
+            components.path = "/api\(path)"
         }
         #if DEBUG
         components.port = 3000
