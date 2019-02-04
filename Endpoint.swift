@@ -45,7 +45,7 @@ enum Keys: String {
 
 
 struct Endpoint {
-    static let apiVersion: Int?
+    static var apiVersion: Int?
 
     let path: String
     let queryItems: [URLQueryItem]
