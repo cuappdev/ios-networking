@@ -98,6 +98,11 @@ class Promise<Value>: Future<Value> {
         result = value.map(Result.value)
     }
 
+    init(error: Error) {
+        super.init()
+        result = error.map(Result.error)
+    }
+
     func resolve(with value: Value) {
         result = .value(value)
     }
