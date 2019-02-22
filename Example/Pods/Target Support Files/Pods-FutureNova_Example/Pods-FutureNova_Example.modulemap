@@ -1,0 +1,6 @@
+framework module Pods_FutureNova_Example {
+  umbrella header "Pods-FutureNova_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

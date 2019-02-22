@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CB9366CDFE7E3EEA800CFE18FBE456D /* Pods-FutureNova_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 107E8BC5A704E70BCEA81CF1A2C802A6 /* Pods-FutureNova_Tests-dummy.m */; };
+		47AA5BF6C8A14194EF5A7F5390349820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		516BFB063CB108FC2C08633D7CF9184E /* FutureNova-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CDE957E1F4B2C460167F40AE429A68 /* FutureNova-dummy.m */; };
+		6D36736622205C55000F9917 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D36736422205C55000F9917 /* Endpoint.swift */; };
+		6D36736722205C55000F9917 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D36736522205C55000F9917 /* Future.swift */; };
+		7848D43A04C20258BB343FF145E0EC5D /* Pods-FutureNova_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D62FCDE41DB600084F42D32840419492 /* Pods-FutureNova_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87DE20A51A4CEA22966DD0D7F258B39C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		B1DEB3A9F0201331D66419D2D1B2E14F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		B3601764741AB17F760C7387D7F0D2C6 /* FutureNova-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF441D2B59CFD69F2B1174348C6CEA17 /* FutureNova-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0B6CF71413AD7E1F87447E4D01AF3E1 /* Pods-FutureNova_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05CB122E008BD04FA3FD03B793BFCAD0 /* Pods-FutureNova_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6B59D655E6B12100D2D67389A43C854 /* Pods-FutureNova_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB093CC05936059C2F47EA5D13B9FB02 /* Pods-FutureNova_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		270F6C615685B861D9558DA14368966A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B9F31FA52D1B1CFBF7C6FD104234D8;
+			remoteInfo = FutureNova;
+		};
+		F282142714388BB20513166A9BF7B27A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 148B646109E6AC9534E7136B70A0D1F5;
+			remoteInfo = "Pods-FutureNova_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		057AD1812BC35DDE57BB9B2CEB1B4ACC /* Pods-FutureNova_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FutureNova_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		05CB122E008BD04FA3FD03B793BFCAD0 /* Pods-FutureNova_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FutureNova_Tests-umbrella.h"; sourceTree = "<group>"; };
+		107E8BC5A704E70BCEA81CF1A2C802A6 /* Pods-FutureNova_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FutureNova_Tests-dummy.m"; sourceTree = "<group>"; };
+		19D05DB750DCE41B00AEEFB0A296ECF5 /* Pods-FutureNova_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FutureNova_Example.modulemap"; sourceTree = "<group>"; };
+		1B193B3E8A295E57C80AD837742C3587 /* Pods-FutureNova_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FutureNova_Example-Info.plist"; sourceTree = "<group>"; };
+		2D8A5E18809DF5E09430C5F1883F6EBB /* Pods-FutureNova_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FutureNova_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		32BCDF7010430823653A653B8D360191 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		420063A4AE01FECA076D8B6D92BDA60C /* Pods_FutureNova_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FutureNova_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CDE957E1F4B2C460167F40AE429A68 /* FutureNova-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FutureNova-dummy.m"; sourceTree = "<group>"; };
+		5960A19700B2FE1327EB7ED0086E0D61 /* Pods-FutureNova_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FutureNova_Example-frameworks.sh"; sourceTree = "<group>"; };
+		63D4EA9A083EFFE594F8E52AEB60C228 /* Pods-FutureNova_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FutureNova_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6BE3BF111F133B4282812F1C9ED4951A /* Pods-FutureNova_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FutureNova_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6D36736422205C55000F9917 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		6D36736522205C55000F9917 /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		8DEB6EC1B1DD639F45DEC7BE9F67C7DC /* Pods-FutureNova_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FutureNova_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9843C2BE5F5763625C0E090E3E7CDFDB /* Pods-FutureNova_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FutureNova_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D64D08A6BF67FA33C8D2D10FACF9EAC /* Pods-FutureNova_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FutureNova_Tests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A9E446FD6C08666A116AD6CC1143B802 /* FutureNova-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FutureNova-Info.plist"; sourceTree = "<group>"; };
+		AC47A9A54414889FFA30235489846197 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BF441D2B59CFD69F2B1174348C6CEA17 /* FutureNova-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FutureNova-umbrella.h"; sourceTree = "<group>"; };
+		C5314CB85DEB5304E83335BFDBB793BF /* FutureNova.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FutureNova.xcconfig; sourceTree = "<group>"; };
+		CA0A5C2AC972D8C1D3F61F1EDC80B36C /* Pods-FutureNova_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FutureNova_Tests.modulemap"; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D62FCDE41DB600084F42D32840419492 /* Pods-FutureNova_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FutureNova_Example-umbrella.h"; sourceTree = "<group>"; };
+		D75350FB8E346EE3D81F1ADFE0EADCCD /* Pods_FutureNova_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FutureNova_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7EF283857014F65CDCB9D82FFA40453 /* Pods-FutureNova_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FutureNova_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D8709BF5237E8576D5281276878C377D /* FutureNova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FutureNova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E88D00813009D0D8A083E6F0B38D7063 /* Pods-FutureNova_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FutureNova_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB093CC05936059C2F47EA5D13B9FB02 /* Pods-FutureNova_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FutureNova_Example-dummy.m"; sourceTree = "<group>"; };
+		EE591974C9A071827670734AEF6699D1 /* FutureNova-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FutureNova-prefix.pch"; sourceTree = "<group>"; };
+		F9CE0C68D3E16C4FCFC37DD87941AF77 /* FutureNova.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = FutureNova.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FD048E2ACDE46226805255B7FC8DBB31 /* FutureNova.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FutureNova.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C38FCAE9A53B80CCC71195D96DD2FD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87DE20A51A4CEA22966DD0D7F258B39C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4977959F33CB6B7845E8593604610000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47AA5BF6C8A14194EF5A7F5390349820 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3711619861BE0896D80354D690D7D5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1DEB3A9F0201331D66419D2D1B2E14F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AE8D963DD2B53FB077598FBD84C2655 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F9CE0C68D3E16C4FCFC37DD87941AF77 /* FutureNova.podspec */,
+				32BCDF7010430823653A653B8D360191 /* LICENSE */,
+				AC47A9A54414889FFA30235489846197 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		215305D96AAC138916622C9D9D9DDBD1 /* Pods-FutureNova_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CA0A5C2AC972D8C1D3F61F1EDC80B36C /* Pods-FutureNova_Tests.modulemap */,
+				D7EF283857014F65CDCB9D82FFA40453 /* Pods-FutureNova_Tests-acknowledgements.markdown */,
+				8DEB6EC1B1DD639F45DEC7BE9F67C7DC /* Pods-FutureNova_Tests-acknowledgements.plist */,
+				107E8BC5A704E70BCEA81CF1A2C802A6 /* Pods-FutureNova_Tests-dummy.m */,
+				9D64D08A6BF67FA33C8D2D10FACF9EAC /* Pods-FutureNova_Tests-Info.plist */,
+				05CB122E008BD04FA3FD03B793BFCAD0 /* Pods-FutureNova_Tests-umbrella.h */,
+				E88D00813009D0D8A083E6F0B38D7063 /* Pods-FutureNova_Tests.debug.xcconfig */,
+				2D8A5E18809DF5E09430C5F1883F6EBB /* Pods-FutureNova_Tests.release.xcconfig */,
+			);
+			name = "Pods-FutureNova_Tests";
+			path = "Target Support Files/Pods-FutureNova_Tests";
+			sourceTree = "<group>";
+		};
+		77343C4E62FE9DB9E7A8EC16CADBD501 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8709BF5237E8576D5281276878C377D /* FutureNova.framework */,
+				D75350FB8E346EE3D81F1ADFE0EADCCD /* Pods_FutureNova_Example.framework */,
+				420063A4AE01FECA076D8B6D92BDA60C /* Pods_FutureNova_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CD6FF20B6ABDC35C7CF69F689452BA3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD048E2ACDE46226805255B7FC8DBB31 /* FutureNova.modulemap */,
+				C5314CB85DEB5304E83335BFDBB793BF /* FutureNova.xcconfig */,
+				52CDE957E1F4B2C460167F40AE429A68 /* FutureNova-dummy.m */,
+				A9E446FD6C08666A116AD6CC1143B802 /* FutureNova-Info.plist */,
+				EE591974C9A071827670734AEF6699D1 /* FutureNova-prefix.pch */,
+				BF441D2B59CFD69F2B1174348C6CEA17 /* FutureNova-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FutureNova";
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BDF9B7CFD79F22ED3BBE8C786E5AA4C4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFE846FEB601C5A6B4F96B69A48C2931 /* Pods-FutureNova_Example */,
+				215305D96AAC138916622C9D9D9DDBD1 /* Pods-FutureNova_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C505D57EB3334FFA76AABA73818D2432 /* FutureNova */ = {
+			isa = PBXGroup;
+			children = (
+				6D36736422205C55000F9917 /* Endpoint.swift */,
+				6D36736522205C55000F9917 /* Future.swift */,
+				0AE8D963DD2B53FB077598FBD84C2655 /* Pod */,
+				7CD6FF20B6ABDC35C7CF69F689452BA3 /* Support Files */,
+			);
+			name = FutureNova;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				E6E301ECE2E3A3538E202AB4B2A67C8E /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				77343C4E62FE9DB9E7A8EC16CADBD501 /* Products */,
+				BDF9B7CFD79F22ED3BBE8C786E5AA4C4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6E301ECE2E3A3538E202AB4B2A67C8E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C505D57EB3334FFA76AABA73818D2432 /* FutureNova */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		EFE846FEB601C5A6B4F96B69A48C2931 /* Pods-FutureNova_Example */ = {
+			isa = PBXGroup;
+			children = (
+				19D05DB750DCE41B00AEEFB0A296ECF5 /* Pods-FutureNova_Example.modulemap */,
+				63D4EA9A083EFFE594F8E52AEB60C228 /* Pods-FutureNova_Example-acknowledgements.markdown */,
+				9843C2BE5F5763625C0E090E3E7CDFDB /* Pods-FutureNova_Example-acknowledgements.plist */,
+				EB093CC05936059C2F47EA5D13B9FB02 /* Pods-FutureNova_Example-dummy.m */,
+				5960A19700B2FE1327EB7ED0086E0D61 /* Pods-FutureNova_Example-frameworks.sh */,
+				1B193B3E8A295E57C80AD837742C3587 /* Pods-FutureNova_Example-Info.plist */,
+				D62FCDE41DB600084F42D32840419492 /* Pods-FutureNova_Example-umbrella.h */,
+				057AD1812BC35DDE57BB9B2CEB1B4ACC /* Pods-FutureNova_Example.debug.xcconfig */,
+				6BE3BF111F133B4282812F1C9ED4951A /* Pods-FutureNova_Example.release.xcconfig */,
+			);
+			name = "Pods-FutureNova_Example";
+			path = "Target Support Files/Pods-FutureNova_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		48B9BAF7A6360BEB8C1F0943A768E6CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0B6CF71413AD7E1F87447E4D01AF3E1 /* Pods-FutureNova_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B286B4907D0261CD2015722701F4BF47 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3601764741AB17F760C7387D7F0D2C6 /* FutureNova-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B511FC8BD933632857298B228AEBAC39 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7848D43A04C20258BB343FF145E0EC5D /* Pods-FutureNova_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		148B646109E6AC9534E7136B70A0D1F5 /* Pods-FutureNova_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF449A1ADABDB7DC51DEBEB74D3E264A /* Build configuration list for PBXNativeTarget "Pods-FutureNova_Example" */;
+			buildPhases = (
+				B511FC8BD933632857298B228AEBAC39 /* Headers */,
+				32B3EE9B36236F56E7D06EA498CD48F5 /* Sources */,
+				4977959F33CB6B7845E8593604610000 /* Frameworks */,
+				61FBBFB96327C60146CDE087A260DC69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82EB5D33F733991DB46632840B397D73 /* PBXTargetDependency */,
+			);
+			name = "Pods-FutureNova_Example";
+			productName = "Pods-FutureNova_Example";
+			productReference = D75350FB8E346EE3D81F1ADFE0EADCCD /* Pods_FutureNova_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1C2E7079253C4B7321C887DA25FFF5D3 /* Pods-FutureNova_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF837B1E2BE2EAF9D5EE145EF53DCB88 /* Build configuration list for PBXNativeTarget "Pods-FutureNova_Tests" */;
+			buildPhases = (
+				48B9BAF7A6360BEB8C1F0943A768E6CA /* Headers */,
+				8C23E86FD16224618FE0777E8BD17C2E /* Sources */,
+				E3711619861BE0896D80354D690D7D5B /* Frameworks */,
+				0EE0C5D56B4122749E6C22A2E33E9A99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23BE84D76272433140B9CC13F501DF4D /* PBXTargetDependency */,
+			);
+			name = "Pods-FutureNova_Tests";
+			productName = "Pods-FutureNova_Tests";
+			productReference = 420063A4AE01FECA076D8B6D92BDA60C /* Pods_FutureNova_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		82B9F31FA52D1B1CFBF7C6FD104234D8 /* FutureNova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E151FAB6308F582A7BBD29A5AD026D3D /* Build configuration list for PBXNativeTarget "FutureNova" */;
+			buildPhases = (
+				B286B4907D0261CD2015722701F4BF47 /* Headers */,
+				F1CE35131608F179AA003F059CDB4765 /* Sources */,
+				0C38FCAE9A53B80CCC71195D96DD2FD7 /* Frameworks */,
+				CD11E086411B942CF28A357C5E2E9A01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FutureNova;
+			productName = FutureNova;
+			productReference = D8709BF5237E8576D5281276878C377D /* FutureNova.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 77343C4E62FE9DB9E7A8EC16CADBD501 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82B9F31FA52D1B1CFBF7C6FD104234D8 /* FutureNova */,
+				148B646109E6AC9534E7136B70A0D1F5 /* Pods-FutureNova_Example */,
+				1C2E7079253C4B7321C887DA25FFF5D3 /* Pods-FutureNova_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EE0C5D56B4122749E6C22A2E33E9A99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61FBBFB96327C60146CDE087A260DC69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD11E086411B942CF28A357C5E2E9A01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32B3EE9B36236F56E7D06EA498CD48F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6B59D655E6B12100D2D67389A43C854 /* Pods-FutureNova_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C23E86FD16224618FE0777E8BD17C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB9366CDFE7E3EEA800CFE18FBE456D /* Pods-FutureNova_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1CE35131608F179AA003F059CDB4765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				516BFB063CB108FC2C08633D7CF9184E /* FutureNova-dummy.m in Sources */,
+				6D36736622205C55000F9917 /* Endpoint.swift in Sources */,
+				6D36736722205C55000F9917 /* Future.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23BE84D76272433140B9CC13F501DF4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FutureNova_Example";
+			target = 148B646109E6AC9534E7136B70A0D1F5 /* Pods-FutureNova_Example */;
+			targetProxy = F282142714388BB20513166A9BF7B27A /* PBXContainerItemProxy */;
+		};
+		82EB5D33F733991DB46632840B397D73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FutureNova;
+			target = 82B9F31FA52D1B1CFBF7C6FD104234D8 /* FutureNova */;
+			targetProxy = 270F6C615685B861D9558DA14368966A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4B47C2F6C4597DC311A6EB7BD92729D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 057AD1812BC35DDE57BB9B2CEB1B4ACC /* Pods-FutureNova_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FutureNova_Example/Pods-FutureNova_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FutureNova_Example/Pods-FutureNova_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6F990A92250C46AC675C99BE46B2B1B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BE3BF111F133B4282812F1C9ED4951A /* Pods-FutureNova_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FutureNova_Example/Pods-FutureNova_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FutureNova_Example/Pods-FutureNova_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C04A925C151FB88EB1F7DF3CC50406D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E88D00813009D0D8A083E6F0B38D7063 /* Pods-FutureNova_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FutureNova_Tests/Pods-FutureNova_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FutureNova_Tests/Pods-FutureNova_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C1A9A70EFD1B7D0B4998FF6147DF7667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5314CB85DEB5304E83335BFDBB793BF /* FutureNova.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FutureNova/FutureNova-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FutureNova/FutureNova-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FutureNova/FutureNova.modulemap";
+				PRODUCT_MODULE_NAME = FutureNova;
+				PRODUCT_NAME = FutureNova;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C9D75C4FF90172E7FD7B592800F4C630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5314CB85DEB5304E83335BFDBB793BF /* FutureNova.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FutureNova/FutureNova-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FutureNova/FutureNova-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FutureNova/FutureNova.modulemap";
+				PRODUCT_MODULE_NAME = FutureNova;
+				PRODUCT_NAME = FutureNova;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D57B10FA00B277CA0431A77E4DA428D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D8A5E18809DF5E09430C5F1883F6EBB /* Pods-FutureNova_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FutureNova_Tests/Pods-FutureNova_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FutureNova_Tests/Pods-FutureNova_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F232B5ECA11A71BFA199A229B323F454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */,
+				F232B5ECA11A71BFA199A229B323F454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E151FAB6308F582A7BBD29A5AD026D3D /* Build configuration list for PBXNativeTarget "FutureNova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D75C4FF90172E7FD7B592800F4C630 /* Debug */,
+				C1A9A70EFD1B7D0B4998FF6147DF7667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF837B1E2BE2EAF9D5EE145EF53DCB88 /* Build configuration list for PBXNativeTarget "Pods-FutureNova_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04A925C151FB88EB1F7DF3CC50406D3 /* Debug */,
+				D57B10FA00B277CA0431A77E4DA428D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF449A1ADABDB7DC51DEBEB74D3E264A /* Build configuration list for PBXNativeTarget "Pods-FutureNova_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B47C2F6C4597DC311A6EB7BD92729D4 /* Debug */,
+				6F990A92250C46AC675C99BE46B2B1B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

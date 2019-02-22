@@ -1,0 +1,22 @@
+{
+  "name": "FutureNova",
+  "version": "0.1.0",
+  "summary": "A short description of FutureNova.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Drew Dunne/FutureNova",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Drew Dunne": "drewsdunne1@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Drew Dunne/FutureNova.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FutureNova/Classes/**/*"
+}
