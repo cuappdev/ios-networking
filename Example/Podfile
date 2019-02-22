@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FutureNova_Example' do
+  pod 'FutureNova', :path => '../'
+
+  target 'FutureNova_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
