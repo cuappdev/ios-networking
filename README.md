@@ -1,19 +1,58 @@
 # FutureNova
 
-[![CI Status](https://img.shields.io/travis/Drew Dunne/FutureNova.svg?style=flat)](https://travis-ci.org/Drew Dunne/FutureNova)
-[![Version](https://img.shields.io/cocoapods/v/FutureNova.svg?style=flat)](https://cocoapods.org/pods/FutureNova)
-[![License](https://img.shields.io/cocoapods/l/FutureNova.svg?style=flat)](https://cocoapods.org/pods/FutureNova)
-[![Platform](https://img.shields.io/cocoapods/p/FutureNova.svg?style=flat)](https://cocoapods.org/pods/FutureNova)
+FutureNova is our networking wrapper using Futures and Promises. Please ignore the name, it was made using a name generator. 
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Customize the Endpoint struct for less repition
+
+```swift
+Endpoint.config.scheme = "https"
+Endpoint.config.host = "dog.ceo"
+Endpoint.config.commonPath = "/api"
+```
+
+Then create your endpoints.
+
+```swift
+extension Endpoint {
+    /// Grabs a random dog breed image
+    static func randomDogBreed() -> Endpoint {
+        return Endpoint(path: "/breeds/image/random")
+    }
+}
+```
+
+Finally, call your endpoint!
+
+```swift
+private let networking: Networking = URLSession.shared.request
+
+private func getRandomImage() -> Future<RandomDogResponse> {
+    return networking(Endpoint.randomDogBreed()).decode()
+}
+
+...
+
+getRandomImage().observe { [weak self] result in
+    switch result {
+    case .value(let resp):
+        self?.presentResponse(resp)
+    case .error(let error):
+        self?.presentError(with: error)
+    }
+}
+```
+
 ## Requirements
+
+No requirements! This is a bare-bones solution to networking.
 
 ## Installation
 
-FutureNova is available through [CocoaPods](https://cocoapods.org). To install
+FutureNova is NOT available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -22,7 +61,8 @@ pod 'FutureNova'
 
 ## Author
 
-Drew Dunne, drewsdunne1@gmail.com
+Cornell AppDev, cornellappdev@gmail.com
+https://www.swiftbysundell.com/posts/under-the-hood-of-futures-and-promises-in-swift?rq=Futures
 
 ## License
 

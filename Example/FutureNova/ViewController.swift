@@ -39,7 +39,6 @@ class ViewController: UIViewController {
             guard let f = self?.networking(Endpoint.dogBreedImage(breed: breed, id: id)) else {
                 return Promise<Data>(error: DogError.failed("Couldn't get endpoint for breed"))
             }
-            print(Endpoint.dogBreedImage(breed: breed, id: id).url)
             return f
             }.chained { data -> Future<UIImage>  in
                 guard let image = UIImage(data: data) else {
