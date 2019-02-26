@@ -8,8 +8,14 @@
 
 import Foundation
 
-struct Endpoint {
-    static let config: Endpoint.Config = Endpoint.Config()
+public struct Endpoint {
+    public static let config: Endpoint.Config = Endpoint.Config()
+
+    let host: String?
+    let scheme: String?
+    let port: Int?
+    let useCommonHeaders: Bool
+    let useCommonPath: Bool
 
     let path: String
     let queryItems: [URLQueryItem]
@@ -20,33 +26,56 @@ struct Endpoint {
 
 // Endpoint sub classes and enums
 extension Endpoint {
-    enum Method: String {
+    public enum Method: String {
         case get = "GET"
         case post = "POST"
         case delete = "DELETE"
     }
 
-    class Config {
-        var scheme: String?
-        var host: String?
-        var port: Int?
-        var commonPath: String?
+    public class Config {
+        public var scheme: String?
+        public var host: String?
+        public var port: Int?
+        public var commonPath: String?
+        public var commonHeaders: [String: String]?
     }
 }
 
 // Endpoint initializers
 extension Endpoint {
     /// General initializer
-    init<T: Codable>(path: String, queryItems: [URLQueryItem] = [], headers: [String: String] = [:], body: T? = nil, method: Endpoint.Method = .get) {
+    public init<T: Codable>(path: String,
+                            queryItems: [URLQueryItem] = [],
+                            headers: [String: String] = [:],
+                            body: T? = nil,
+                            method: Endpoint.Method = .get,
+                            useCommonHeaders: Bool = true,
+                            useCommonPath: Bool = true,
+                            customHost: String? = nil,
+                            customScheme: String? = nil,
+                            customPort: Int? = nil) {
         self.path = path
         self.queryItems = queryItems
         self.headers = headers
         self.method = (body != nil) ? .post : method
         self.body = try? JSONEncoder().encode(body)
+
+        self.host = customHost
+        self.port = customPort
+        self.scheme = customScheme
+        self.useCommonPath = useCommonPath
+        self.useCommonHeaders = useCommonHeaders
     }
 
     /// POST initializer
-    init<T: Codable>(path: String, headers: [String: String] = [:], body: T) {
+    public init<T: Codable>(path: String,
+                            headers: [String: String] = [:],
+                            body: T,
+                            useCommonHeaders: Bool = true,
+                            useCommonPath: Bool = true,
+                            customHost: String? = nil,
+                            customScheme: String? = nil,
+                            customPort: Int? = nil) {
         self.path = path
         self.queryItems = []
         self.headers = headers
@@ -54,15 +83,34 @@ extension Endpoint {
 
         //Encode body
         self.body = try? JSONEncoder().encode(body)
+
+        self.host = customHost
+        self.port = customPort
+        self.scheme = customScheme
+        self.useCommonPath = useCommonPath
+        self.useCommonHeaders = useCommonHeaders
     }
 
     /// GET initializer
-    init(path: String, queryItems: [URLQueryItem] = [], headers: [String: String] = [:]) {
+    public init(path: String,
+                queryItems: [URLQueryItem] = [],
+                headers: [String: String] = [:],
+                useCommonHeaders: Bool = true,
+                useCommonPath: Bool = true,
+                customHost: String? = nil,
+                customScheme: String? = nil,
+                customPort: Int? = nil) {
         self.path = path
         self.queryItems = queryItems
         self.headers = headers
         self.method = .get
         self.body = nil
+
+        self.host = customHost
+        self.port = customPort
+        self.scheme = customScheme
+        self.useCommonPath = useCommonPath
+        self.useCommonHeaders = useCommonHeaders
     }
 }
 
@@ -70,33 +118,41 @@ extension Endpoint {
 extension Endpoint {
     // We still have to keep 'url' as an optional, since we're
     // dealing with dynamic components that could be invalid.
-    var url: URL? {
+    public var url: URL? {
         var components = URLComponents()
         // Assert required values have been set
         assert(Endpoint.config.scheme != nil, "Endpoint: scheme has not been set")
         assert(Endpoint.config.host != nil, "Endpoint: host has not been set")
         
-        components.scheme = Endpoint.config.scheme
-        components.host = Endpoint.config.host
+        components.scheme = scheme != nil ? scheme! : Endpoint.config.scheme
+        components.host = host != nil ? host! : Endpoint.config.host
 
         // Check for common path variable
-        if let cPath = Endpoint.config.commonPath {
+        if let cPath = Endpoint.config.commonPath, useCommonPath {
             components.path = "\(cPath)\(path)"
         } else {
             components.path = path
         }
 
         // Check if port has been set
-        if let port = Endpoint.config.port {
+        if let port = port {
+            components.port = port
+        } else if let port = Endpoint.config.port {
             components.port = port
         }
+        
         components.queryItems = queryItems
         return components.url
     }
 
-    var urlRequest: URLRequest? {
+    public var urlRequest: URLRequest? {
         guard let unwrappedURL = url else { return nil }
         var request = URLRequest(url: unwrappedURL)
+        if let cHeaders = Endpoint.config.commonHeaders, useCommonHeaders {
+            cHeaders.forEach { (key, value) in
+                request.addValue(value, forHTTPHeaderField: key)
+            }
+        }
         headers.forEach { (key, value) in
             request.addValue(value, forHTTPHeaderField: key)
         }

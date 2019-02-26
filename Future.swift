@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias Networking = (Endpoint) -> Future<Data>
+public typealias Networking = (Endpoint) -> Future<Data>
 
-enum Result<Value> {
+public enum Result<Value> {
     case value(Value)
     case error(Error)
 }
@@ -34,7 +34,7 @@ extension Result where Value == Data {
     }
 }
 
-class Future<Value> {
+public class Future<Value> {
     fileprivate var result: Result<Value>? {
         didSet { result.map(report) }
     }
@@ -43,7 +43,7 @@ class Future<Value> {
 
     private lazy var callbacks = [(Result<Value>) -> Void]()
 
-    func observe(with callback: @escaping (Result<Value>) -> Void) {
+    public func observe(with callback: @escaping (Result<Value>) -> Void) {
         callbacks.append(callback)
         result.map(callback)
     }
@@ -56,7 +56,7 @@ class Future<Value> {
 }
 
 extension Future {
-    func chained<NextValue>(with closure: @escaping (Value) throws -> Future<NextValue>) -> Future<NextValue> {
+    public func chained<NextValue>(with closure: @escaping (Value) throws -> Future<NextValue>) -> Future<NextValue> {
         let promise = Promise<NextValue>()
 
         observe { result in
@@ -84,41 +84,41 @@ extension Future {
         return promise
     }
 
-    func transformed<NextValue>(with closure: @escaping (Value) throws -> NextValue) -> Future<NextValue> {
+    public func transformed<NextValue>(with closure: @escaping (Value) throws -> NextValue) -> Future<NextValue> {
         return chained { value in
             return try Promise(value: closure(value))
         }
     }
 }
 
-class Promise<Value>: Future<Value> {
+public class Promise<Value>: Future<Value> {
 
-    init(value: Value? = nil) {
+    public init(value: Value? = nil) {
         super.init()
         result = value.map(Result.value)
     }
 
-    init(error: Error) {
+    public init(error: Error) {
         super.init()
         result = .error(error)
     }
 
-    func resolve(with value: Value) {
+    public func resolve(with value: Value) {
         result = .value(value)
     }
 
-    func reject(with error: Error) {
+    public func reject(with error: Error) {
         result = .error(error)
     }
 }
 
 extension URLSession {
 
-    enum EndpointErrors: Error {
+    public enum EndpointErrors: Error {
         case badUrlRequest
     }
 
-    func request(endpoint: Endpoint) -> Future<Data> {
+    public func request(endpoint: Endpoint) -> Future<Data> {
         let promise = Promise<Data>()
 
         guard let urlRequest = endpoint.urlRequest else {
@@ -148,7 +148,7 @@ extension URLSession {
 extension Future where Value == Data {
 
 
-    func decode<NextValue: Codable>(_ type: NextValue.Type) -> Future<NextValue> {
+    public func decode<NextValue: Codable>(_ type: NextValue.Type) -> Future<NextValue> {
         return transformed {
             //Uncomment this line to see what is being decoded
             //print(String.init(data: $0, encoding: .utf8))
@@ -156,7 +156,7 @@ extension Future where Value == Data {
         }
     }
     
-    func decode<NextValue: Codable>() -> Future<NextValue> {
+    public func decode<NextValue: Codable>() -> Future<NextValue> {
         return transformed {
             //Uncomment this line to see what is being decoded
             //print(String.init(data: $0, encoding: .utf8))
@@ -167,14 +167,14 @@ extension Future where Value == Data {
 
 // This turns an (A) -> B function into a () -> B function,
 // by using a constant value for A.
-func combine<A, B>(_ value: A,
+public func combine<A, B>(_ value: A,
                    with closure: @escaping (A) -> B) -> () -> B {
     return { closure(value) }
 }
 
 // This turns an (A) -> B and a (B) -> () -> C function into a
 // (A) -> C function, by chaining them together.
-func chain<A, B, C>(
+public func chain<A, B, C>(
     _ inner: @escaping (A) -> B,
     to outer: @escaping (B) -> () -> C
     ) -> (A) -> C {
