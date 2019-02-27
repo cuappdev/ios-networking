@@ -62,6 +62,7 @@ pod 'FutureNova'
 ## Author
 
 Cornell AppDev, cornellappdev@gmail.com
+
 https://www.swiftbysundell.com/posts/under-the-hood-of-futures-and-promises-in-swift?rq=Futures
 
 ## License
