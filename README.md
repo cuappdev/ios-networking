@@ -56,7 +56,7 @@ FutureNova is NOT available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'FutureNova'
+pod 'FutureNova', :git => 'https://github.com/cuappdev/ios-networking.git'
 ```
 
 ## Author
