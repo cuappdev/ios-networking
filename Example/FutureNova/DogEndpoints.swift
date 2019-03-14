@@ -9,7 +9,31 @@
 import Foundation
 import FutureNova
 
+struct RefreshTokenResp: Codable {
+    let success: Bool
+    let token: String
+    let expiration: Int
+    let refreshToken: String
+}
+
+enum DogMiddleware {
+
+    func checkSession(req: URLRequest) -> Future<URLRequest> {
+        return URLSession.shared
+            .request(endpoint: Endpoint.refreshToken("austins_basement:user=mattcoufal1942"))
+            .decode(RefreshTokenResp.self)
+            .transformed { resp in
+                let newReq = req // pretend update headers
+                return newReq
+        }
+    }
+}
+
 extension Endpoint {
+
+    static func refreshToken(_ refreshToken: String) -> Endpoint {
+        return Endpoint(path: "/refreshSession", queryItems: [URLQueryItem(name: "refreshToken", value: refreshToken)])
+    }
 
     /// Grabs a random dog breed image
     static func randomDogBreed() -> Endpoint {

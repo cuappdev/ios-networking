@@ -8,7 +8,9 @@
 
 import Foundation
 
-public typealias Networking = (Endpoint) -> Future<Data>
+public typealias Middleware = (URLRequest) -> Future<URLRequest>
+
+public typealias Networking = (Endpoint, Array<Middleware>) -> Future<Data>
 
 public enum Result<Value> {
     case value(Value)
@@ -118,13 +120,8 @@ extension URLSession {
         case badUrlRequest
     }
 
-    public func request(endpoint: Endpoint) -> Future<Data> {
+    private func request(urlRequest: URLRequest) -> Future<Data> {
         let promise = Promise<Data>()
-
-        guard let urlRequest = endpoint.urlRequest else {
-            promise.reject(with: EndpointErrors.badUrlRequest)
-            return promise
-        }
 
         let task =  dataTask(with: urlRequest) { data, _, error in
             if error?._code == NSURLErrorCancelled {
@@ -142,6 +139,25 @@ extension URLSession {
         promise.currentTask = task
 
         return promise
+    }
+
+    public func request(endpoint: Endpoint, preMiddleware: [Middleware] = []) -> Future<Data> {
+        guard let urlRequest = endpoint.urlRequest else {
+            return Promise<Data>(error: EndpointErrors.badUrlRequest)
+        }
+
+        var mws = preMiddleware
+        if !mws.isEmpty {
+            let mw = mws.removeFirst()
+            let f = mw(urlRequest)
+            var fChain: Future<URLRequest> = f
+            mws.forEach { middle in
+                fChain = fChain.chained(with: middle)
+            }
+            return fChain.chained(with: request)
+        } else {
+            return request(urlRequest: urlRequest)
+        }
     }
 }
 
