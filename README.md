@@ -6,7 +6,7 @@ FutureNova is our networking wrapper using Futures and Promises. Please ignore t
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-Customize the Endpoint struct for less repition
+Customize the Endpoint struct for less repetition
 
 ```swift
 Endpoint.config.scheme = "https"
@@ -61,7 +61,7 @@ pod 'FutureNova', :git => 'https://github.com/cuappdev/ios-networking.git'
 
 ## Author
 
-Cornell AppDev, cornellappdev@gmail.com
+Cornell AppDev, team@cornellappdev.com
 
 https://www.swiftbysundell.com/posts/under-the-hood-of-futures-and-promises-in-swift?rq=Futures
 
