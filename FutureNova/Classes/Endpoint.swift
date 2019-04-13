@@ -80,9 +80,11 @@ extension Endpoint {
         self.queryItems = []
         self.method = .post
 
-        // Set Content-Type to application/json so that we can send body as JSON
         var modifiedHeaders = headers
-        modifiedHeaders["Content-Type"] = "application/json"
+        if modifiedHeaders["Content-Type"] == nil {
+            // Set Content-Type to application/json so backend can identify json body
+            modifiedHeaders["Content-Type"] = "application/json"
+        }
         self.headers = modifiedHeaders
 
         // Encode body
