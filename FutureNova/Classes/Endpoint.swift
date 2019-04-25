@@ -44,7 +44,7 @@ extension Endpoint {
 
 // Endpoint initializers
 extension Endpoint {
-    /// General initializer
+    /// General initializer with body
     public init<T: Codable>(path: String,
                             queryItems: [URLQueryItem] = [],
                             headers: [String: String] = [:],
@@ -68,6 +68,30 @@ extension Endpoint {
         self.method = (body != nil) ? .post : method
         self.body = try? JSONEncoder().encode(body)
 
+        self.host = customHost
+        self.port = customPort
+        self.scheme = customScheme
+        self.useCommonPath = useCommonPath
+        self.useCommonHeaders = useCommonHeaders
+    }
+
+    /// General initializer without body
+    public init(path: String,
+                            queryItems: [URLQueryItem] = [],
+                            headers: [String: String] = [:],
+                            method: Endpoint.Method = .get,
+                            useCommonHeaders: Bool = true,
+                            useCommonPath: Bool = true,
+                            customHost: String? = nil,
+                            customScheme: String? = nil,
+                            customPort: Int? = nil) {
+        self.path = path
+        self.queryItems = queryItems
+
+        self.headers = headers
+
+        self.method = method
+        self.body = nil
         self.host = customHost
         self.port = customPort
         self.scheme = customScheme
