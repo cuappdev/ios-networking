@@ -30,6 +30,7 @@ extension Endpoint {
         case get = "GET"
         case post = "POST"
         case delete = "DELETE"
+        case put = "PUT"
     }
 
     public class Config {
@@ -56,7 +57,14 @@ extension Endpoint {
                             customPort: Int? = nil) {
         self.path = path
         self.queryItems = queryItems
-        self.headers = headers
+
+        var modifiedHeaders = headers
+        if modifiedHeaders["Content-Type"] == nil {
+            // Set Content-Type to application/json so backend can identify json body
+            modifiedHeaders["Content-Type"] = "application/json"
+        }
+        self.headers = modifiedHeaders
+
         self.method = (body != nil) ? .post : method
         self.body = try? JSONEncoder().encode(body)
 
