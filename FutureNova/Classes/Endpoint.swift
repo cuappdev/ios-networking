@@ -65,11 +65,7 @@ extension Endpoint {
         }
         self.headers = modifiedHeaders
 
-<<<<<<< HEAD
         self.method = method
-=======
-        self.method = (body != nil) ? .post : method
->>>>>>> origin
         self.body = try? JSONEncoder().encode(body)
 
         self.host = customHost
