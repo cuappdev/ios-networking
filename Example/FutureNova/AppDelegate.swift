@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         endpointConfig()
 
@@ -29,6 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Endpoint.config.scheme = "https"
         Endpoint.config.host = "dog.ceo"
         Endpoint.config.commonPath = "/api"
+
+        // Uncomment for GraphQL
+//        Endpoint.config.scheme = "https"
+//        Endpoint.config.host = "" // ADD EATERY URL HERE
+//        Endpoint.config.commonPath = "/"
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
