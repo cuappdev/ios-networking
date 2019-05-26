@@ -150,17 +150,21 @@ extension Future where Value == Data {
 
     public func decode<NextValue: Codable>(_ type: NextValue.Type) -> Future<NextValue> {
         return transformed {
-            //Uncomment this line to see what is being decoded
-            //print(String.init(data: $0, encoding: .utf8))
-            return try JSONDecoder().decode(NextValue.self, from: $0)
+            // Uncomment this line to see what is being decoded
+            // print(String.init(data: $0, encoding: .utf8))
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = Endpoint.config.keyDecodingStrategy
+            return try decoder.decode(NextValue.self, from: $0)
         }
     }
     
     public func decode<NextValue: Codable>() -> Future<NextValue> {
         return transformed {
-            //Uncomment this line to see what is being decoded
-            //print(String.init(data: $0, encoding: .utf8))
-            return try JSONDecoder().decode(NextValue.self, from: $0)
+            // Uncomment this line to see what is being decoded
+            // print(String.init(data: $0, encoding: .utf8))
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = Endpoint.config.keyDecodingStrategy
+            return try decoder.decode(NextValue.self, from: $0)
         }
     }
 }
