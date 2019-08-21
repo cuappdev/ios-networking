@@ -24,7 +24,7 @@ A simple networking wrapper using Futures and Promises.
   s.homepage         = 'https://github.com/cuappdev/ios-networking'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Cornell AppDev' => 'cornellappdev@gmail.com' }
+  s.author           = { 'Cornell AppDev' => 'team@cornellappdev.com' }
   s.source           = { :git => 'https://github.com/cuappdev/ios-networking.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

@@ -20,5 +20,5 @@ extension Endpoint {
     static func dogBreedImage(breed: String, id: String) -> Endpoint {
         return Endpoint(path: "/breeds/\(breed)/\(id)", useCommonPath: false, customHost: "images.dog.ceo")
     }
-    
+
 }

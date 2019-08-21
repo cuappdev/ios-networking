@@ -53,6 +53,19 @@ class ViewController: UIViewController {
                     self?.presentError(with: error)
                 }
         }
+
+        getNastysEatery().chained { apiResp -> Future<[Eatery]> in
+                print(apiResp)
+                guard let data = apiResp.data else { return Promise<[Eatery]>(error: EateryError.error) }
+                return Promise<[Eatery]>(value: data.eateries)
+            }.observe { resp in
+                switch resp {
+                case .value(let eateries):
+                    print(eateries)
+                case .error(let err):
+                    print(err)
+                }
+        }
     }
 
     func presentError(with error: Error) {
@@ -67,6 +80,10 @@ class ViewController: UIViewController {
 
     private func getRandomImage() -> Future<RandomDogResponse> {
         return networking(Endpoint.randomDogBreed()).decode()
+    }
+
+    private func getNastysEatery() -> Future<APIResponse<EateryResp>> {
+        return networking(Endpoint.getEateries(id: 1)).decode()
     }
 
     override func didReceiveMemoryWarning() {
