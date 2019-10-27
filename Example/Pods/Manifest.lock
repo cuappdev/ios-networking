@@ -1,5 +1,5 @@
 PODS:
-  - FutureNova (0.1.0)
+  - FutureNova (0.1.2)
 
 DEPENDENCIES:
   - FutureNova (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FutureNova: 4ec06fff761c5bc35c33508a36ac697c8da1a7f7
+  FutureNova: ac182c4b251f385e7b8f9cead95a7b2779805676
 
 PODFILE CHECKSUM: bfa6d8c5ce37ef534967cde7304a7b63ef6f34d4
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.8.3
